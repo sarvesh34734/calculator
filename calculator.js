@@ -29,7 +29,16 @@ for(var i=0;i<buttons.length;i++)
                 document.getElementById("displayText").innerText="DivisionByZero";
             }
             else{
-                document.getElementById("displayText").innerText=eval(operand1+" "+operator+" "+operand2);
+                // document.getElementById("displayText").innerText=eval(operand1+" "+operator+" "+operand2);
+                var output=eval(operand1+" "+operator+" "+operand2);
+                var stringOutput=output.toString();
+                if(stringOutput.length>16)
+                {
+                    document.getElementById("displayText").innerText=output.toExponential(10);
+                }
+                else{
+                    document.getElementById("displayText").innerText=output;
+                }
             }
         }
         else if(value=="+/-")
