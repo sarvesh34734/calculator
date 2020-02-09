@@ -57,6 +57,15 @@ for(var i=0;i<buttons.length;i++)
         else if(value==".")
         {
             console.log("decimal");
+            var disText=document.getElementById("displayText").textContent;
+            if(disText!="+" || disText!="*" || disText!="/" || disText!="-" || disText!="%")
+            {
+                
+                if(!disText.includes("."))
+                {
+                    document.getElementById("displayText").innerText=disText+".";
+                }
+            }
         }
         else{
             console.log("number");
