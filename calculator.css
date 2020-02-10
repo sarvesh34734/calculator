@@ -4,11 +4,12 @@ body{
     width: 100vw;
 
 }
+
 #outer
 {
     display:flex;
     position: relative;
-    top:20%;
+    top:15%;
     left:30%;
     flex-direction: column;
     align-items: center;
