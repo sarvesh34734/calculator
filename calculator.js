@@ -157,16 +157,17 @@ document.addEventListener("keypress",function(event){
         }
 
     }
-    else if(keyCode==127 || keyCode==46)
+    else if(keyCode==127 )
     {
         console.log("ac")
         document.getElementById("displayText").innerText=0;
         operand1=0;
         operand2=null;
     }
-    else if(value==".")
+    else if(value=="." || keyCode==46)
     {
         console.log("decimal");
+        event.preventDefault();
         var disText=document.getElementById("displayText").textContent;
         if(disText!="+" || disText!="*" || disText!="/" || disText!="-" || disText!="%")
         {
